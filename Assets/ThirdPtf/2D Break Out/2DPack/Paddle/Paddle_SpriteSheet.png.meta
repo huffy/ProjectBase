@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 25a54fa934db2411aab5066e7e9cd628
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Paddle_SpriteSheet_0
+    21300002: Paddle_SpriteSheet_1
+    21300004: Paddle_SpriteSheet_2
+    21300006: Paddle_SpriteSheet_3
+    21300008: Paddle_SpriteSheet_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    sprites:
+    - name: Paddle_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 128
+        width: 128
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 16}
+        - {x: -64, y: 13}
+        - {x: -64, y: -11}
+        - {x: -63, y: -16}
+        - {x: 57, y: -16}
+        - {x: 64, y: -10}
+        - {x: 64, y: 10}
+        - {x: 57, y: 16}
+    - name: Paddle_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 96
+        width: 148
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -74, y: 16}
+        - {x: -74, y: -16}
+        - {x: 73, y: -16}
+        - {x: 74, y: -12}
+        - {x: 74, y: 16}
+    - name: Paddle_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 64
+        width: 168
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79, y: 16}
+        - {x: -84, y: 10}
+        - {x: -84, y: -9}
+        - {x: -78, y: -16}
+        - {x: 83, y: -16}
+        - {x: 84, y: -12}
+        - {x: 84, y: 14}
+        - {x: 80, y: 16}
+    - name: Paddle_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 32
+        width: 188
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -88, y: 16}
+        - {x: -94, y: 13}
+        - {x: -94, y: -11}
+        - {x: -93, y: -16}
+        - {x: 93, y: -16}
+        - {x: 94, y: -11}
+        - {x: 94, y: 13}
+        - {x: 88, y: 16}
+    - name: Paddle_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 228
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -108, y: 16}
+        - {x: -114, y: 13}
+        - {x: -114, y: -11}
+        - {x: -113, y: -16}
+        - {x: 113, y: -16}
+        - {x: 114, y: -11}
+        - {x: 114, y: 13}
+        - {x: 108, y: 16}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

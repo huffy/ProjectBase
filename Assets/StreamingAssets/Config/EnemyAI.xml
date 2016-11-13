@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EnemyAI>
+  <EnemyAI1> <!--第一个AI-->
+    <moveSpeed > 0.03</moveSpeed>
+    <stayTime> 2</stayTime>
+    <aroundTime> 1</aroundTime>
+    <attackSpeed> 1</attackSpeed>
+    <followSpeed> 0.04</followSpeed>
+    <viewRange> 6</viewRange>
+    <attackRange> 2</attackRange>
+    <feelRange> 3</feelRange>
+    <runSpeed> 0.05</runSpeed>
+    <isForceAttack> true</isForceAttack>
+    <colliderRange> 1</colliderRange>
+  </EnemyAI1>
+  
+  
+</EnemyAI>
