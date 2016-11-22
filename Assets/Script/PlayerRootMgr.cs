@@ -5,16 +5,12 @@
 
 
 using Assets.Script.Base;
-using Assets.Script.ManyState;
 using System;
 
 namespace Assets.Script
 {
     public class PlayerRootMgr : TSingleton<PlayerRootMgr>, IDisposable
     {
-
-        public PlayerValueContorl mPlayerValueContorl;
-
         public override void Init()
         {
             base.Init();

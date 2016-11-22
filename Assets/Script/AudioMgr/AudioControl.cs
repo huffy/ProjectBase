@@ -5,7 +5,6 @@
 
 
 using Assets.Script.Base;
-using Assets.Script.Tools;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -90,52 +89,6 @@ namespace Assets.Script.AudioMgr
         }
 
         #endregion
-
-        #region author:Kuribayashi
-        /// <summary>
-        /// 在指定位置播放一次音效
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="locaiton"></param>
-        public void PlayOnceSoundEffectAtLocation(int id, Vector3 locaiton)
-        {
-            mAudioSourceArr[mAudioSourceArr.Length - 1].clip = GetAudioClipByID(id);
-            mAudioSourceArr[mAudioSourceArr.Length - 1].Play();
-
-        }
-
-        public void PlayOnceSoundEffectAtLocationByProbability(int id, Vector3 locaiton, int probability)
-        {
-            int r = UnityEngine.Random.Range(1, 101);
-            if (100 - probability < r)
-            {
-                //  AudioSource.PlayClipAtPoint(GetAudioClipByID(id), locaiton, audioVolume);
-                PlayAudioAtWorld(new AudioSetting(GetAudioClipByID(id), 0, audioVolume), locaiton);
-                Debug.Log("当たり前");
-            }
-        }
-
-        public void PlayAudioAtWorld(AudioSetting setting, Vector3 point)
-        {
-            GameObject go = new GameObject("once sound");
-            go.transform.position = point;
-            AudioSource audiosource = go.AddComponent<AudioSource>();
-            audiosource.volume = setting.volume;
-            audiosource.spatialBlend = setting.spatiaBlend;
-            audiosource.clip = setting.clip;
-            audiosource.Play();
-            AudioEvent audioEvent = go.AddComponent<AudioEvent>();
-            audioEvent.onclipfinish = () => { UnityEngine.Object.Destroy(go); };
-        }
-
-
-
-
-
-
-
-        #endregion
-
 
         #region  public
 

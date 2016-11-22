@@ -6,7 +6,6 @@ using Assets.Script.Tools;
 
 public class UIManger : MonoBehaviour 
 {
-    private GameObject objKey;
     private void Awake()
     {
         Init();
@@ -28,7 +27,6 @@ public class UIManger : MonoBehaviour
     /// </summary>
     private void InitCompenont()
     {
-        objKey = transform.FindChild("key").gameObject;
     }
 
     private void InitData()

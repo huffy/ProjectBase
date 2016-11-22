@@ -1,7 +1,4 @@
-﻿
-using Assets.Script.ManyState;
-using UnityEngine;
-/// <summary>
+﻿/// <summary>
 /// 状态基类,定义了状态的基础方法
 /// 为什么需要定义为3个呢
 /// 是因为有些逻辑都是进入状态或者退出状态的时候执行的,
@@ -12,7 +9,7 @@ using UnityEngine;
 /// 3>状态退出
 /// </summary>
 /// <typeparam name="TState">使用泛型,哪个状态使用,就传入哪个状态</typeparam>
-public class FsmState<TState> where TState : CreatorBase
+public class FsmState<TState>
 {
 
     /// <summary>
@@ -27,7 +24,6 @@ public class FsmState<TState> where TState : CreatorBase
     /// <param name="TState"></param>
     public virtual void Enter()
     {
-        Target.AnimationPlay();
     }
 
     /// <summary>
@@ -36,8 +32,6 @@ public class FsmState<TState> where TState : CreatorBase
     /// <param name="TState"></param>
     public virtual void Update()
     {
-
-
     }
 
     /// <summary>

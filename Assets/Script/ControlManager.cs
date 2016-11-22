@@ -1,22 +1,15 @@
 ﻿using UnityEngine;
 using System;
-using Assets.Script;
 using Assets.Script.Base;
-using Assets.Script.BallMgr;
-using Assets.Script.BallMgr.Paddle;
 using Assets.Script.Tools;
 
 public class ControlManager : TSingleton<ControlManager>, IDisposable
 {
     #region private
     private Camera cam;
-    private ContorlPaddle mContorlPaddle;
-    private PaddleCreator mPaddleCreator;
     #endregion
     public override void Init()
     {
-        mContorlPaddle = new ContorlPaddle();
-        mContorlPaddle.Init();
         base.Init();
     }
     public override void Dispose()
@@ -29,13 +22,11 @@ public class ControlManager : TSingleton<ControlManager>, IDisposable
     {
         base.InitComponent();
         cam = Camera.main;
-        mPaddleCreator = MonoBehaviour.FindObjectOfType(typeof(PaddleCreator)) as PaddleCreator;
     }
 
     public override void InitData()
     {
         base.InitData();
-        mContorlPaddle.SetMonoCreator(mPaddleCreator);
     }
 
     /// <summary>
@@ -80,7 +71,6 @@ public class ControlManager : TSingleton<ControlManager>, IDisposable
         Vector3 newPosition = Vector3.zero;
         newPosition = cam.ScreenToWorldPoint(pos);
         newPosition.z = 0;
-        mContorlPaddle.MovePaddle(newPosition);
     }
     #endregion
 }

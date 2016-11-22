@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
-using Assets.Script.ManyState;
 
 /// <summary>
 /// 状态机
 /// 使用这个来驱动各种状态
 /// </summary>
 /// <typeparam name="entitytype"></typeparam>
-public class FsmStateMachine<TState> where TState : CreatorBase
+public class FsmStateMachine<TState>
 {
     //状态持有对象
     private TState mOwner;

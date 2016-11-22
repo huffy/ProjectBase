@@ -4,13 +4,8 @@
 //创建时间：
 
 
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Script.ManyState.PlayerStatek;
-using Spine.Unity;
 using UnityEngine;
 using System;
-using Assets.Script.EventMgr;
 using Assets.Script.Base;
 
 namespace Assets.Script
@@ -20,7 +15,6 @@ namespace Assets.Script
         public Camera mainCamera;
         private Transform playerTrans;
         private Vector3 cameraOffest;
-        private GlitchEffectController mEffectController;
         #region Init
 
         public override void Init()

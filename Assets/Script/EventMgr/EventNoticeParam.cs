@@ -5,7 +5,6 @@
 
 
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Script.EventMgr
@@ -17,7 +16,6 @@ namespace Assets.Script.EventMgr
     [Serializable]
     public class SceneBgm 
     {
-      public RoomType mRoomType;
       public int audioId;
     }
     /// <summary>
