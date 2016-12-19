@@ -79,12 +79,13 @@ namespace Assets.Script.Timer
 
         public void Finish(int sequenceTime)
         {
-            if (sequenceTime == m_sequenceTime && CTimerEvent != null)
+            if (sequenceTime == m_sequenceTime)
                 Finish();
         }
 
         public void Finish()
         {
+            if (null == CTimerEvent) return;
             CTimerEvent(m_sequenceTime);
         }
 
