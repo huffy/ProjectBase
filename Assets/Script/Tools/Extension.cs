@@ -38,7 +38,7 @@ public static class Extension
     {
         if (trans != null )
         {
-            trans.gameObject.CustomSetActive(bActive);
+            trans.gameObject.SetActive(bActive);
         }
     }
 

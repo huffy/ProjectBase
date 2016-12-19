@@ -31,4 +31,9 @@ namespace Assets.Script.EventMgr
             base.Dispose();
         }
     }
+
+    public delegate void TDelegate();
+    public delegate void TDelegate<T>(T t);
+    public delegate void TDelegate<T0,T1>(T0 t0,T1 t1);
+    public delegate void TDelegate<T0, T1, T2>(T0 t0, T1 t1, T2 t2);
 }
