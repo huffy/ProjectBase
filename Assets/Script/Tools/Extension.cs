@@ -44,7 +44,7 @@ public static class Extension
 
     public static T FindChildComponent<T>(this Transform trans, string childPath, bool forceAdd = false) where T : Component 
     {
-        Transform temp = trans.FindChild(childPath);
+        Transform temp = trans.Find(childPath);
         if (temp != null)
         {
             if (temp.GetComponent<T>() == null)

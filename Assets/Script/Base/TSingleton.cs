@@ -3,41 +3,68 @@
 //创建者: 胡海辉
 //创建时间：
 
+using Assets.Script.Base;
 using System;
-namespace Assets.Script.Base
+public class TSingleton<T> : BaseCommpoent where T : IDisposable, new()
 {
-    public class TSingleton<T> : BaseCommpoent  where T : IDisposable, new()
+    private static T s_instance;
+
+    public static T instance
     {
-        private static T _instance;
-        static TSingleton()
+        get
         {
-           _instance = default(T);
-        }
-
-        public static void Destory()
-        {
-            if (_instance != null)
+            if (s_instance == null)
             {
-               TSingleton<T>._instance.Dispose();
-              _instance = default(T);
+                CreateInstance();
             }
-        }
-
-        public static T GetInstance()
-        {
-            if (_instance == null)
-            {
-                T local = default(T);
-               _instance = (local == null) ? Activator.CreateInstance<T>() : default(T);
-            }
-            return _instance;
-        }
-
-        public override void Dispose()
-        {
-            base.Dispose();
+            return s_instance;
         }
     }
 
+    public static void CreateInstance()
+    {
+        if (s_instance == null)
+        {
+            s_instance = Activator.CreateInstance<T>();
+            if (s_instance is TSingleton<T>)
+            {
+                (s_instance as TSingleton<T>).Init();
+            }
+        }
+    }
+
+    public static void DestroyInstance()
+    {
+        if (s_instance != null)
+        {
+            (s_instance as TSingleton<T>).Dispose();
+            s_instance = (T)((object)null);
+        }
+    }
+
+    public static T GetInstance()
+    {
+        if (s_instance == null)
+        {
+            CreateInstance();
+        }
+        return s_instance;
+    }
+
+    public static bool HasInstance()
+    {
+        return s_instance != null;
+    }
+
+    public virtual void Init()
+    {
+    }
+
+    public virtual void Update(float deltaTime)
+    { }
+
+    public virtual void Dispose()
+    {
+    }
 
 }

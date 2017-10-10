@@ -39,9 +39,9 @@ namespace Assets.Script
         public override void Init()
         {
             //AudioControl.GetInstance().Init();
-            CharActorHelper.GetInstance().Init();
-            ControlManager.GetInstance().Init();
-            PlayerRootMgr.GetInstance().Init();
+            CharActorHelper.CreateInstance();
+            ControlManager.CreateInstance();
+            PlayerRootMgr.CreateInstance();
             base.Init();
         }
 
@@ -87,10 +87,10 @@ namespace Assets.Script
 
         public override void OnDestroy()
         {
-            ControlManager.Destory();
-            CharActorHelper.Destory();
+            ControlManager.DestroyInstance();
+            CharActorHelper.DestroyInstance();
             //AudioControl.Destory();
-            PlayerRootMgr.Destory();
+            PlayerRootMgr.DestroyInstance();
             base.OnDestroy();
         }
 

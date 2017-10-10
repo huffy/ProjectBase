@@ -35,7 +35,7 @@ namespace Assets.Script
         public T GetPrefab<T>(string pathStr, Transform trans)
         {
             GameObject goPrefab = Resources.Load(pathStr) as GameObject;
-            Transform transChild = trans.FindChild(goPrefab.name);
+            Transform transChild = trans.Find(goPrefab.name);
             if (transChild == null)
             {
                 GameObject go = MonoBehaviour.Instantiate<GameObject>(goPrefab);

@@ -41,7 +41,7 @@ public class TiggerTipsMgr : MonoBehaviour
     /// </summary>
     private void InitCompenont()
     {
-        Transform trans = transform.FindChild("tips");
+        Transform trans = transform.Find("tips");
         if (trans != null)
         {
             commTiggerTips = trans.GetComponent<SpriteRenderer>();
@@ -67,7 +67,6 @@ public class TiggerTipsMgr : MonoBehaviour
     /// </summary>
     private void InitListener()
     {
-        EventManager.GetInstance().AddListener(EventDefine.TiggerType, TiggerChangeType);
     }
 
     /// <summary>
@@ -75,7 +74,6 @@ public class TiggerTipsMgr : MonoBehaviour
     /// </summary>
     private void RemoveListener()
     {
-        EventManager.GetInstance().RemoveListener(EventDefine.TiggerType, TiggerChangeType);
     }
 
     private void TiggerChangeType(object obj, EventArgs e)

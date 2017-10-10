@@ -35,7 +35,6 @@ namespace Assets.Script
         public override void InitListener()
         {
             base.InitListener();
-            EventManager.GetInstance().AddListener(EventDefine.TiggerType, OnTiggerType);
         }
 
         /// <summary>
@@ -44,7 +43,6 @@ namespace Assets.Script
         public override void RemoveListener()
         {
             base.RemoveListener();
-            EventManager.GetInstance().RemoveListener(EventDefine.TiggerType, OnTiggerType);
         }
 
         #endregion
